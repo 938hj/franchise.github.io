@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+    <nav aria-label="Main Navigation">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo-img">
+        </div>
+        <ul>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('our_team') }}">Our Team</a></li>
+            <li><a href="{{ url_for('portfolios') }}">Portfolios</a></li>
+            <li><a href="{{ url_for('news_and_events') }}">News and Events</a></li>
+        </ul>
+    </nav>
+
+    <h1>About Us</h1>
+    <p>Welcome to our company!</p>
+    <img src="{{ url_for('static', filename='images/ph.jpg') }}" alt="investment philosophy">
+    <footer>
+        <p>COPYRIGHT © 2024 FRANCHISE CAPITAL</p>
+    </footer>
+</body>
+</html>
