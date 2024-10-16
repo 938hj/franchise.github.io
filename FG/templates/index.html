@@ -67,13 +67,27 @@
             font-size: 2.5em;
         }
 
-        /* 内容区域样式 */
-        .content-text {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 两列，宽度相同 */
+            gap: 10px; /* 列和行之间的间隙 */
             padding: 20px;
-            line-height: 1.6;
-            font-size: 1.1em;
-            float: right;
-            width: 45%;
+            justify-items: center;
+        }
+
+        .grid-item {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.5em; /* 增大字体 */
+            line-height: 1.5; /* 增大行距 */
+
+        }
+
+        .grid-image {
+            border-radius: 5px;
+            max-height: 150px; /* 限制图片高度 */
         }
 
         /* 页脚样式 */
@@ -105,21 +119,21 @@
     <header id="main-header">
         <h1>Invest in innovations with Franchise</h1>
     </header>
-    <div style="
-        background color: #f1f1f1;
-        padding: 60px;
-        float: left;
-        width: 45%;"
-    >
-        <img src="{{ url_for('static', filename='images/growth.jpg') }}" alt="growth" class="growth-img">
-    </div>
 
-    <div class="content-text">
-        <p>Franchise Capital was founded by Simon Wang on July 1, 2015. It is a leading hedge fund with one of the best performances in China. Its current AUM exceeds $660 million. Franchise Capital was seeded by Hillhouse Capital and has built up a long term, high-quality investor base, featuring world-leading endowments, family offices, etc. Franchise Capital aims to invest in great businesses with innovation, strong organizations, wide moats, a good environment, and an expected IRR of 30%+ in 3-5 years. Sector focus: Hardware, Internet, Software, Consumer, and Healthcare.</p>
-    </div>
+    <div class="grid-container">
+        <div class="grid-image"
+        >
+            <img src="{{ url_for('static', filename='images/growth.jpg') }}" alt="growth" class="growth-img">
+        </div>
 
-    <footer>
-        <p>COPYRIGHT © 2024 FRANCHISE CAPITAL</p>
-    </footer>
+        <div class="grid-item"
+        >
+            <p>Franchise Capital was founded by Simon Wang on July 1, 2015. It is a leading hedge fund with one of the best performances in China. Its current AUM exceeds $660 million. Franchise Capital was seeded by Hillhouse Capital and has built up a long term, high-quality investor base, featuring world-leading endowments, family offices, etc. Franchise Capital aims to invest in great businesses with innovation, strong organizations, wide moats, a good environment, and an expected IRR of 30%+ in 3-5 years. Sector focus: Hardware, Internet, Software, Consumer, and Healthcare.</p>
+        </div>
+
+        <footer>
+            <p>COPYRIGHT © 2024 FRANCHISE CAPITAL</p>
+        </footer>
+    </div>
 </body>
 </html>
